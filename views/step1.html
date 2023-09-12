@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>GET: https://notify-bot.line.me/oauth/authorize</h2>
+    <form method="GET" action="https://notify-bot.line.me/oauth/authorize">
+        <p>response_type:</p>
+        <input type="text" name="response_type" value="code" size="30">
+        <p>client_id:</p>
+        <input type="text" name="client_id" value="{{ .clientId }}" size="30">
+        <p>redirect_uri:</p>
+        <input type="text" name="redirect_uri" value="{{ .redirectURL }}" size="30">
+        <p>scope:</p>
+        <input type="text" name="scope" value="notify" size="30">
+        <p>state:</p>
+        <input type="text" name="state" value="csrfToken" size="30">
+        <br>
+        <br>
+        <input type="submit" value="綁定">
+    </form>
+</body>
+</html>

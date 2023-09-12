@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>POST: https://notify-bot.line.me/oauth/token</h2>
+    <form method="POST" action="/step3">
+        <p>grant_type:</p>
+        <input type="text" name="grant_type" value="authorization_code" size="30">
+        <p>code:</p>
+        <input type="text" name="code" value="{{ .code }}" size="30">
+        <p>redirect_uri:</p>
+        <input type="text" name="redirect_uri" value="{{ .redirectURL }}" size="30">
+        <p>client_id:</p>
+        <input type="text" name="client_id" value="{{ .clientId }}" size="30">
+        <p>client_secret:</p>
+        <input type="text" name="client_secret" value="{{ .clientSecret }}" size="30">
+        <br>
+        <br>
+        <input type="submit" value="取得 accessToken">
+    </form>
+</body>
+</html>

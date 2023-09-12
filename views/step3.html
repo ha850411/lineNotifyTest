@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>json response</h2>
+    <div>{{ .jsonStr }}</div>
+
+    <h2>POST https://notify-api.line.me/api/notify</h2>
+    <form method="POST" action="/send">
+        <p>accessToken:</p>
+        <input type="text" name="accessToken" value="{{ .accessToken }}" size="30">
+        <p>message:</p>
+        <textarea name="message"></textarea>
+        <br>
+        <br>
+        <input type="submit" value="send message">
+    </form>
+</body>
+</html>

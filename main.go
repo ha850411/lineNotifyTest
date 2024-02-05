@@ -8,6 +8,8 @@ import (
 )
 
 func main() {
+	// 測試
+	// test
 	// 初始化 gin 物件
 	ginServer := gin.Default()
 	// 載入 Router
